@@ -41,11 +41,11 @@
                     </Label>
                 </Frame>
                 <Label
-                    Text="Świetna jakość!"
+                    Text="{Binding CaqiTitle}"
                     Style="{StaticResource TitleStyle}"
                     HorizontalTextAlignment="Center"/>
                 <Label
-                    Text="Możesz bezpiecznie wyjść z domu bez swojej maski anty-smogowej i nie bać się o swoje zdrowie."
+                    Text="{Binding CaqiDescription}"
                     FontSize="14"
                     TextColor="Black" />
 
@@ -74,7 +74,7 @@
                                             TextColor="Black"
                                             FontSize="14"/>
                                         <Span
-                                            Text="(137%)"
+                                            Text="{Binding Pm25Percent, StringFormat='({0}%)'}"
                                             TextColor="Black"
                                             FontSize="20"/>
                                     </FormattedString>
@@ -99,7 +99,7 @@
                                 <Label.FormattedText>
                                     <FormattedString>
                                         <Span
-                                            Text="67"
+                                            Text="{Binding Pm10Value}"
                                             TextColor="Black"
                                             FontSize="20"/>
                                         <Span
@@ -107,7 +107,7 @@
                                             TextColor="Black"
                                             FontSize="14"/>
                                         <Span
-                                            Text="(135%)"
+                                            Text="{Binding Pm10Percent, StringFormat='({0}%)'}"
                                             TextColor="Black"
                                             FontSize="20"/>
                                     </FormattedString>
@@ -126,11 +126,11 @@
                     <controls:ContentWithHeader.ControlContent>
                         <StackLayout>
                             <Label
-                                Text="95%"
+                                Text="97%"
                                 FontSize="20"
                                 TextColor="Black" />
                             <Slider
-                                Value="0.95"
+                                Value="{Binding HumidityValue}"
                                 MaximumTrackColor="Gray"
                                 MinimumTrackColor="CornflowerBlue"
                                 ThumbColor="CornflowerBlue"/>
@@ -146,7 +146,7 @@
                     <controls:ContentWithHeader.ControlContent>
                         <StackLayout>
                             <Label
-                                Text="1026 hPa"
+                                Text="{Binding PressureValue, StringFormat='{0} hPa'}"
                                 FontSize="20"
                                 TextColor="Black" />
                             <!-- Set Maximum before Minimum in Slider -->
